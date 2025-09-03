@@ -57,14 +57,21 @@
 
 
 // Troca de cor
+window.addEventListener("DOMContentLoaded", () => {
+  const text = document.querySelectorAll(".swap-text-black");
+  text.forEach((el) => {
+    el.style.color = "#fff";
+  });
+});
+
 window.addEventListener("scroll", () => {
   const text = document.querySelectorAll(".swap-text-black");
 
   text.forEach((el) => {
-    if (window.scrollY > 550) {
-      el.style.color = "#000";
+    if (window.scrollY < 550) {
+      el.style.color = "#fff";
     } else {
-      el.style.color = "white";
+      el.style.color = "#000";
     }
   });
 });
